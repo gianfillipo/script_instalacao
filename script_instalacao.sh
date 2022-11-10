@@ -52,7 +52,8 @@ function instalar_java() {
     
     echo "$(tput setaf 52)[AXIA Assistant]:$(tput setaf 15) Agora, vamos checar se o Java já está instalado."
 
-    if [ -n `which java` ]; then
+    java -version
+    if [ $? -eq 0 ]; then
         echo "$(tput setaf 52)[AXIA Assistant]:$(tput setaf 15) O Java já está instalado! Prosseguindo..."
         sleep 2
     else
@@ -87,8 +88,9 @@ function instalar_java() {
 function instalar_python() {
     
     echo "$(tput setaf 52)[AXIA Assistant]:$(tput setaf 15) Agora, vamos checar se o python já está instalado."
-
-    if [ -n 'which python3' ]; then
+        
+    python3 --version
+    if [ $? -eq 0 ]; then
         echo "$(tput setaf 52)[AXIA Assistant]:$(tput setaf 15) O python já está instalado! Prosseguindo..."
         sleep 2
     else
@@ -122,8 +124,9 @@ function instalar_pip() {
    
     echo  "$(tput setaf 52)[AXIA Assistant]:$(tput setaf 15) Agora vamos verificar se o Pip já está instalado.;"
     sleep 2
-
-    if [ -n 'which pip' ]; then
+   
+    pip --version
+    if [ $? -eq 0 ]; then
         echo "$(tput setaf 52)[AXIA Assistant]:$(tput setaf 15) O Pip já está instalado!"
         sleep 2
     else
