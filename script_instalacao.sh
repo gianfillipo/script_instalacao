@@ -110,7 +110,7 @@ function instalar_python() {
             echo "$(tput setaf 52)[AXIA Assistant]:$(tput setaf 15) Atualizando..."
             sleep 2
             sudo apt update -y
-            sleep 2B
+            sleep 2
             clear
             echo "$(tput setaf 52)[AXIA Assistant]:$(tput setaf 15) Python3 instalado com sucesso!"
         else
@@ -131,17 +131,17 @@ function instalar_pip() {
         sleep 2
     else
         echo "$(tput setaf 52)[AXIA Assistant]:$(tput setaf 15) O Pip não está instalado. Deseja instalar o Pip e suas bibliotecas? (S/N)?"
-        sleep 3
+        sleep 2
         
         read instalar_pip
         if [ "$instalar_pip" = "s" ]; then
             echo "$(tput setaf 52)[AXIA Assistant]:$(tput setaf 15) Você escolheu instalar o Pip."
-            sleep 3
+            sleep 2
             sudo apt install python3-pip
             clear
 
             echo "$(tput setaf 52)[AXIA Assistant]:$(tput setaf 15) Atualizando! Quase lá."
-            sleep 3
+            sleep 2
             sudo apt update -y
             clear
             
@@ -149,11 +149,11 @@ function instalar_pip() {
             pip install psutil
             pip install -U textwrap3
             pip install pyMySQL
-            sleep 3
+            sleep 2
             clear  
             
             echo "$(tput setaf 52)[AXIA Assistant]:$(tput setaf 15) Todas as bibliotecas do Pip foram instaladas com sucesso!"
-            sleep 3
+            sleep 2
         else
             echo "Tchau"
         fi
